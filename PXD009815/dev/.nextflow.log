@@ -1,0 +1,512 @@
+Mar-15 08:57:32.778 [main] DEBUG nextflow.cli.Launcher - $> nextflow run /home/veit/WOMBAT-P/WOMBAT-Pipelines/main.nf --raws 'raws/*' --parameters test_params.yml --fasta uniprot_contaminant_yeast_ups_prot_03022023.fasta -profile docker -resume --sdrf sdrf_proline.tsv
+Mar-15 08:57:32.933 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 22.04.4
+Mar-15 08:57:32.967 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /home/veit/WOMBAT-P/WOMBAT-Pipelines/nextflow.config
+Mar-15 08:57:32.970 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/veit/WOMBAT-P/WOMBAT-Pipelines/nextflow.config
+Mar-15 08:57:33.010 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
+Mar-15 08:57:34.761 [main] DEBUG nextflow.plugin.PluginsFacade - Using Default plugins manager
+Mar-15 08:57:34.788 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Mar-15 08:57:34.790 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Mar-15 08:57:34.798 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Mar-15 08:57:34.809 [main] DEBUG nextflow.plugin.PluginsFacade - Using Default plugins manager
+Mar-15 08:57:35.858 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [cfc_dev, ifb_core, denbi_qbic, genotoul, alice, mjolnir_globe, uppmax, abims, nihbiowulf, nu_genomics, oist, sahmri, mpcdf, leicester, lugh, vsc_ugent, sage, cambridge, unibe_ibu, vai, podman, czbiohub_aws, jax, cheaha, ccga_med, test, scw, tigem, google, computerome, ipop_up, seg_globe, sanger, dkfz, pasteur, test_full, eddie, medair, azurebatch, bi, hki, bigpurple, sbc_sharc, adcra, crukmi, cedars, docker, engaging, gis, psmn, eva, ucl_myriad, utd_ganymede, charliecloud, fgcz, conda, crg, singularity, icr_davros, ceres, munin, rosalind, prince, hasta, cfc, utd_sysbio, uzh, debug, genouest, cbe, ebc, ku_sund_dangpu, ccga_dx, crick, marvin, phoenix, biohpc_gen, shifter, mana, wehi, awsbatch, uct_hpc, imperial, maestro, aws_tower, binac]
+Mar-15 08:57:35.909 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Mar-15 08:57:35.938 [main] INFO  nextflow.cli.CmdRun - Launching `/home/veit/WOMBAT-P/WOMBAT-Pipelines/main.nf` [kickass_poincare] DSL2 - revision: 1d9a391a7a
+Mar-15 08:57:35.940 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/veit/.nextflow/plugins; core-plugins: nf-amazon@1.7.2,nf-azure@0.13.2,nf-console@1.0.3,nf-ga4gh@1.0.3,nf-google@1.1.4,nf-sqldb@0.4.0,nf-tower@1.4.0
+Mar-15 08:57:35.941 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Mar-15 08:57:35.948 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Mar-15 08:57:35.948 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Mar-15 08:57:35.951 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Mar-15 08:57:35.966 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Mar-15 08:57:36.057 [main] DEBUG nextflow.Session - Session uuid: 95be954c-7e3c-41a3-8303-d16a028a8680
+Mar-15 08:57:36.057 [main] DEBUG nextflow.Session - Run name: kickass_poincare
+Mar-15 08:57:36.058 [main] DEBUG nextflow.Session - Executor pool size: 48
+Mar-15 08:57:36.106 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 22.04.4 build 5706
+  Created: 19-06-2022 20:51 UTC (22:51 CEST)
+  System: Linux 5.4.0-104-generic
+  Runtime: Groovy 3.0.10 on OpenJDK 64-Bit Server VM 11.0.9.1-internal+0-adhoc..src
+  Encoding: UTF-8 (UTF-8)
+  Process: 358799@protprotocols [10.137.1.93]
+  CPUs: 48 - Mem: 188.6 GB (120.2 GB) - Swap: 8 GB (2.6 MB)
+Mar-15 08:57:36.163 [main] DEBUG nextflow.Session - Work-dir: /data2/veit/PXD009815/work [ext2/ext3]
+Mar-15 08:57:36.189 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Mar-15 08:57:36.209 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Mar-15 08:57:36.317 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Mar-15 08:57:36.339 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 49; maxThreads: 1000
+Mar-15 08:57:36.596 [main] DEBUG nextflow.Session - Session start invoked
+Mar-15 08:57:36.601 [main] DEBUG nextflow.trace.TraceFileObserver - Flow starting -- trace file: /data2/veit/PXD009815/results/pipeline_info/execution_trace_2023-03-15_08-57-35.txt
+Mar-15 08:57:36.611 [main] DEBUG nextflow.Session - Using default localLib path: /home/veit/WOMBAT-P/WOMBAT-Pipelines/lib
+Mar-15 08:57:36.616 [main] DEBUG nextflow.Session - Adding to the classpath library: /home/veit/WOMBAT-P/WOMBAT-Pipelines/lib
+Mar-15 08:57:36.617 [main] DEBUG nextflow.Session - Adding to the classpath library: /home/veit/WOMBAT-P/WOMBAT-Pipelines/lib/nfcore_external_java_deps.jar
+Mar-15 08:57:38.170 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Mar-15 08:57:38.437 [main] INFO  nextflow.Nextflow - 
+
+-[2m----------------------------------------------------[0m-
+                                        [0;32m,--.[0;30m/[0;32m,-.[0m
+[0;34m        ___     __   __   __   ___     [0;32m/,-._.--~'[0m
+[0;34m  |\ | |__  __ /  ` /  \ |__) |__         [0;33m}  {[0m
+[0;34m  | \| |       \__, \__/ |  \ |___     [0;32m\`-._,-`-,[0m
+                                        [0;32m`._,._,'[0m
+[0;35m  nf-core/wombat v1.0dev[0m
+-[2m----------------------------------------------------[0m-
+[1mCore Nextflow options[0m
+  [0;34mrunName        : [0;32mkickass_poincare[0m
+  [0;34mcontainerEngine: [0;32mdocker[0m
+  [0;34mlaunchDir      : [0;32m/data2/veit/PXD009815[0m
+  [0;34mworkDir        : [0;32m/data2/veit/PXD009815/work[0m
+  [0;34mprojectDir     : [0;32m/home/veit/WOMBAT-P/WOMBAT-Pipelines[0m
+  [0;34muserName       : [0;32mveit[0m
+  [0;34mprofile        : [0;32mdocker[0m
+  [0;34mconfigFiles    : [0;32m/home/veit/WOMBAT-P/WOMBAT-Pipelines/nextflow.config[0m
+
+[1mInput/output options[0m
+  [0;34moutdir         : [0;32mresults[0m
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+-[2m----------------------------------------------------[0m-
+If you use nf-core/wombat for your analysis please cite:
+
+* The nf-core framework
+  https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+  https://github.com/nf-core/wombat/blob/master/CITATIONS.md
+-[2m----------------------------------------------------[0m-
+Mar-15 08:57:43.841 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_WOMBAT:WOMBAT:PREPARE_FILES
+Mar-15 08:57:43.849 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:43.849 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:43.855 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Mar-15 08:57:43.861 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=48; memory=188.6 GB; capacity=48; pollInterval=100ms; dumpInterval=5m
+Mar-15 08:57:43.954 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_WOMBAT:WOMBAT:SDRFMERGE
+Mar-15 08:57:43.956 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:43.956 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:43.965 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_WOMBAT:WOMBAT:MAXQUANT:CONVERT_MAXQUANT
+Mar-15 08:57:43.966 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:43.966 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:43.975 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name NFCORE_WOMBAT:WOMBAT:MAXQUANT:MAXQUANT_LFQ
+Mar-15 08:57:43.976 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:43.976 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:43.986 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_WOMBAT:WOMBAT:MAXQUANT:NORMALYZERDE
+Mar-15 08:57:43.988 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:43.988 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.013 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low,process_single_thread` for process with name NFCORE_WOMBAT:WOMBAT:CALCBENCHMARKS_MQ
+Mar-15 08:57:44.014 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.015 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.035 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low,process_single_thread` for process with name NFCORE_WOMBAT:WOMBAT:PROLINE:RAW2MZDB
+Mar-15 08:57:44.037 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.037 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.043 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low,process_single_thread` for process with name NFCORE_WOMBAT:WOMBAT:PROLINE:MZDB2MGF
+Mar-15 08:57:44.044 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.044 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.062 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low,process_single_thread` for process with name NFCORE_WOMBAT:WOMBAT:PROLINE:CREATE_DECOY_DATABASE
+Mar-15 08:57:44.064 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.064 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.071 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low,process_single_thread` for process with name NFCORE_WOMBAT:WOMBAT:PROLINE:PREPARE_SEARCHGUI
+Mar-15 08:57:44.072 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.072 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.116 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name NFCORE_WOMBAT:WOMBAT:PROLINE:RUN_SEARCHGUI
+Mar-15 08:57:44.118 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.118 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.131 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low,process_single_thread` for process with name NFCORE_WOMBAT:WOMBAT:PROLINE:CONFIG_PROLINE
+Mar-15 08:57:44.131 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.132 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.138 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low,process_single_thread` for process with name NFCORE_WOMBAT:WOMBAT:PROLINE:EXP_DESIGN_PROLINE
+Mar-15 08:57:44.138 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.139 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.145 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name NFCORE_WOMBAT:WOMBAT:PROLINE:RUN_PROLINE
+Mar-15 08:57:44.145 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.145 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.150 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name NFCORE_WOMBAT:WOMBAT:PROLINE:POLYSTEST
+Mar-15 08:57:44.150 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.150 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.156 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_WOMBAT:WOMBAT:PROLINE:CONVERT_POLYSTEST
+Mar-15 08:57:44.157 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.158 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.168 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low,process_single_thread` for process with name NFCORE_WOMBAT:WOMBAT:CALCBENCHMARKS_PROLINE
+Mar-15 08:57:44.169 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.169 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.178 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.178 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.184 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low,process_single_thread` for process with name NFCORE_WOMBAT:WOMBAT:COMPOMICS:CREATE_DECOY_DATABASE
+Mar-15 08:57:44.185 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.185 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.192 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low,process_single_thread` for process with name NFCORE_WOMBAT:WOMBAT:COMPOMICS:PREPARE_SEARCHGUI
+Mar-15 08:57:44.192 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.192 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.199 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name NFCORE_WOMBAT:WOMBAT:COMPOMICS:RUN_SEARCHGUI
+Mar-15 08:57:44.200 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.200 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.218 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name NFCORE_WOMBAT:WOMBAT:COMPOMICS:RUN_PEPTIDESHAKER
+Mar-15 08:57:44.219 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.219 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.226 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium,process_single_thread` for process with name NFCORE_WOMBAT:WOMBAT:COMPOMICS:PEPTIDESHAKER_REPORT
+Mar-15 08:57:44.227 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.227 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.239 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name NFCORE_WOMBAT:WOMBAT:COMPOMICS:FLASHLFQ
+Mar-15 08:57:44.240 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.240 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.256 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name NFCORE_WOMBAT:WOMBAT:COMPOMICS:MSQROB
+Mar-15 08:57:44.257 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.257 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.266 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low,process_single_thread` for process with name NFCORE_WOMBAT:WOMBAT:CALCBENCHMARKS_COMPOMICS
+Mar-15 08:57:44.267 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.268 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.281 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.281 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.288 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low,process_single_thread` for process with name NFCORE_WOMBAT:WOMBAT:TPP:WRITE_CONFIG
+Mar-15 08:57:44.289 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.289 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.295 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name NFCORE_WOMBAT:WOMBAT:TPP:RUN_COMET
+Mar-15 08:57:44.296 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.296 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.305 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_WOMBAT:WOMBAT:TPP:PEPTIDEPROPHET
+Mar-15 08:57:44.306 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.306 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.314 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_WOMBAT:WOMBAT:TPP:PROTEINPROPHET
+Mar-15 08:57:44.315 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.315 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.323 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_WOMBAT:WOMBAT:TPP:STPETER
+Mar-15 08:57:44.324 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.324 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.333 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_WOMBAT:WOMBAT:TPP:PROTXML2CSV
+Mar-15 08:57:44.334 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.334 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.347 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_WOMBAT:WOMBAT:TPP:MERGEOUTPUT
+Mar-15 08:57:44.348 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.348 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.355 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium,process_single_thread` for process with name NFCORE_WOMBAT:WOMBAT:TPP:ROTS
+Mar-15 08:57:44.356 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.357 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.363 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low,process_single_thread` for process with name NFCORE_WOMBAT:WOMBAT:CALCBENCHMARKS_TPP
+Mar-15 08:57:44.364 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-15 08:57:44.364 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-15 08:57:44.371 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: NFCORE_WOMBAT:WOMBAT:PREPARE_FILES, NFCORE_WOMBAT:WOMBAT:MAXQUANT:NORMALYZERDE, NFCORE_WOMBAT:WOMBAT:TPP:PEPTIDEPROPHET, MZDB2MGF, NFCORE_WOMBAT:WOMBAT:TPP:RUN_COMET, NFCORE_WOMBAT:WOMBAT:PROLINE:RUN_SEARCHGUI, NFCORE_WOMBAT:WOMBAT:PROLINE:PREPARE_SEARCHGUI, NFCORE_WOMBAT:WOMBAT:CALCBENCHMARKS_PROLINE, CONVERT_MAXQUANT, PROTEINPROPHET, NFCORE_WOMBAT:WOMBAT:TPP:WRITE_CONFIG, CALCBENCHMARKS_TPP, CALCBENCHMARKS_COMPOMICS, NFCORE_WOMBAT:WOMBAT:CALCBENCHMARKS_TPP, NFCORE_WOMBAT:WOMBAT:TPP:RAW2MZML, STPETER, MAXQUANT_LFQ, NFCORE_WOMBAT:WOMBAT:SDRFMERGE, RUN_PEPTIDESHAKER, NFCORE_WOMBAT:WOMBAT:COMPOMICS:CREATE_DECOY_DATABASE, NFCORE_WOMBAT:WOMBAT:TPP:MERGEOUTPUT, NFCORE_WOMBAT:WOMBAT:COMPOMICS:PEPTIDESHAKER_REPORT, NFCORE_WOMBAT:WOMBAT:TPP:ROTS, NFCORE_WOMBAT:WOMBAT:PROLINE:RAW2MZDB, WRITE_CONFIG, RUN_COMET, NFCORE_WOMBAT:WOMBAT:COMPOMICS:MSQROB, NFCORE_WOMBAT:WOMBAT:TPP:STPETER, PEPTIDEPROPHET, MERGEOUTPUT, NFCORE_WOMBAT:WOMBAT:COMPOMICS:RUN_PEPTIDESHAKER, NFCORE_WOMBAT:WOMBAT:PROLINE:EXP_DESIGN_PROLINE, CONVERT_POLYSTEST, MSQROB, RUN_PROLINE, POLYSTEST, NFCORE_WOMBAT:WOMBAT:MAXQUANT:MAXQUANT_LFQ, NFCORE_WOMBAT:WOMBAT:PROLINE:MZDB2MGF, FLASHLFQ, RAW2MZML, NFCORE_WOMBAT:WOMBAT:COMPOMICS:PREPARE_SEARCHGUI, NFCORE_WOMBAT:WOMBAT:CALCBENCHMARKS_COMPOMICS, CALCBENCHMARKS_MQ, ROTS, NFCORE_WOMBAT:WOMBAT:CALCBENCHMARKS_MQ, NFCORE_WOMBAT:WOMBAT:MAXQUANT:CONVERT_MAXQUANT, NFCORE_WOMBAT:WOMBAT:COMPOMICS:FLASHLFQ, NFCORE_WOMBAT:WOMBAT:PROLINE:CONVERT_POLYSTEST, EXP_DESIGN_PROLINE, NFCORE_WOMBAT:WOMBAT:PROLINE:POLYSTEST, NFCORE_WOMBAT:WOMBAT:COMPOMICS:RAW2MZML, PREPARE_FILES, RUN_SEARCHGUI, CREATE_DECOY_DATABASE, PROTXML2CSV, NFCORE_WOMBAT:WOMBAT:PROLINE:CONFIG_PROLINE, NFCORE_WOMBAT:WOMBAT:PROLINE:RUN_PROLINE, CALCBENCHMARKS_PROLINE, CALCBENCHMARKS, NFCORE_WOMBAT:WOMBAT:TPP:PROTEINPROPHET, PEPTIDESHAKER_REPORT, NFCORE_WOMBAT:WOMBAT:PROLINE:CREATE_DECOY_DATABASE, NFCORE_WOMBAT:WOMBAT:COMPOMICS:RUN_SEARCHGUI, CONFIG_PROLINE, RAW2MZDB, SDRFMERGE, PREPARE_SEARCHGUI, NFCORE_WOMBAT:WOMBAT:TPP:PROTXML2CSV, NORMALYZERDE
+Mar-15 08:57:44.372 [main] DEBUG nextflow.Session - Ignite dataflow network (47)
+Mar-15 08:57:44.383 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: raws/; pattern: *; options: [:]
+Mar-15 08:57:44.386 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:PREPARE_FILES
+Mar-15 08:57:44.390 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:SDRFMERGE
+Mar-15 08:57:44.392 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:MAXQUANT:CONVERT_MAXQUANT
+Mar-15 08:57:44.394 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:MAXQUANT:MAXQUANT_LFQ
+Mar-15 08:57:44.397 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:MAXQUANT:NORMALYZERDE
+Mar-15 08:57:44.400 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:CALCBENCHMARKS_MQ
+Mar-15 08:57:44.402 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:PROLINE:RAW2MZDB
+Mar-15 08:57:44.403 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:PROLINE:MZDB2MGF
+Mar-15 08:57:44.405 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:PROLINE:CREATE_DECOY_DATABASE
+Mar-15 08:57:44.407 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:PROLINE:PREPARE_SEARCHGUI
+Mar-15 08:57:44.412 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:PROLINE:RUN_SEARCHGUI
+Mar-15 08:57:44.414 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:PROLINE:CONFIG_PROLINE
+Mar-15 08:57:44.414 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:PROLINE:EXP_DESIGN_PROLINE
+Mar-15 08:57:44.414 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:PROLINE:RUN_PROLINE
+Mar-15 08:57:44.415 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:PROLINE:POLYSTEST
+Mar-15 08:57:44.417 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:PROLINE:CONVERT_POLYSTEST
+Mar-15 08:57:44.417 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:CALCBENCHMARKS_PROLINE
+Mar-15 08:57:44.417 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:COMPOMICS:RAW2MZML
+Mar-15 08:57:44.418 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:COMPOMICS:CREATE_DECOY_DATABASE
+Mar-15 08:57:44.418 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:COMPOMICS:PREPARE_SEARCHGUI
+Mar-15 08:57:44.418 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:COMPOMICS:RUN_SEARCHGUI
+Mar-15 08:57:44.418 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:COMPOMICS:RUN_PEPTIDESHAKER
+Mar-15 08:57:44.419 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:COMPOMICS:PEPTIDESHAKER_REPORT
+Mar-15 08:57:44.419 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:COMPOMICS:FLASHLFQ
+Mar-15 08:57:44.420 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:COMPOMICS:MSQROB
+Mar-15 08:57:44.421 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:CALCBENCHMARKS_COMPOMICS
+Mar-15 08:57:44.421 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:TPP:RAW2MZML
+Mar-15 08:57:44.422 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:TPP:WRITE_CONFIG
+Mar-15 08:57:44.426 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:TPP:RUN_COMET
+Mar-15 08:57:44.426 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:TPP:PEPTIDEPROPHET
+Mar-15 08:57:44.427 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:TPP:PROTEINPROPHET
+Mar-15 08:57:44.427 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:TPP:STPETER
+Mar-15 08:57:44.427 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:TPP:PROTXML2CSV
+Mar-15 08:57:44.427 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:TPP:MERGEOUTPUT
+Mar-15 08:57:44.427 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:TPP:ROTS
+Mar-15 08:57:44.427 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_WOMBAT:WOMBAT:CALCBENCHMARKS_TPP
+Mar-15 08:57:44.427 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Mar-15 08:57:44.427 [main] DEBUG nextflow.Session - Session await
+Mar-15 08:57:44.758 [Actor Thread 49] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=4; maxSize=4; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Mar-15 08:57:44.762 [FileTransfer-1] DEBUG nextflow.file.FilePorter - Copying foreign file https://raw.githubusercontent.com/bigbio/proteomics-metadata-standard/master/sdrf-proteomics/assets/param2sdrf.yml to work dir: /data2/veit/PXD009815/work/stage/d7/77360665c174a22a51991dffa1c3e8/param2sdrf.yml
+Mar-15 08:57:44.976 [Actor Thread 49] DEBUG nextflow.util.CacheHelper - Unable to get file attributes file: /data2/veit/PXD009815/no_exp_design -- Cause: java.nio.file.NoSuchFileException: /data2/veit/PXD009815/no_exp_design
+Mar-15 08:57:44.977 [Actor Thread 49] DEBUG nextflow.util.CacheHelper - Unable to get file attributes file: /data2/veit/PXD009815/no_mzmls -- Cause: java.nio.file.NoSuchFileException: /data2/veit/PXD009815/no_mzmls
+Mar-15 08:57:45.137 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-15 08:57:45.144 [Task submitter] INFO  nextflow.Session - [e8/03b7c2] Submitted process > NFCORE_WOMBAT:WOMBAT:PREPARE_FILES
+Mar-15 08:57:48.835 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: NFCORE_WOMBAT:WOMBAT:PREPARE_FILES; status: COMPLETED; exit: 0; error: -; workDir: /data2/veit/PXD009815/work/e8/03b7c298040cb01eb4ba6d0698ba37]
+Mar-15 08:57:48.983 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_WOMBAT:WOMBAT:PREPARE_FILES > Skipping output binding because one or more optional files are missing: fileoutparam<5>
+Mar-15 08:57:49.252 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-15 08:57:49.253 [Task submitter] INFO  nextflow.Session - [de/ff4431] Submitted process > NFCORE_WOMBAT:WOMBAT:PROLINE:RAW2MZDB (4)
+Mar-15 08:57:49.298 [FileTransfer-2] DEBUG nextflow.file.FilePorter - Local cache found for foreign file https://raw.githubusercontent.com/bigbio/proteomics-metadata-standard/master/sdrf-proteomics/assets/param2sdrf.yml at /data2/veit/PXD009815/work/stage/d7/77360665c174a22a51991dffa1c3e8/param2sdrf.yml
+Mar-15 08:57:49.669 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-15 08:57:49.670 [Task submitter] INFO  nextflow.Session - [2d/f53dce] Submitted process > NFCORE_WOMBAT:WOMBAT:COMPOMICS:RAW2MZML (3)
+Mar-15 08:57:49.686 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-15 08:57:49.687 [Task submitter] INFO  nextflow.Session - [90/5cab96] Submitted process > NFCORE_WOMBAT:WOMBAT:PROLINE:RAW2MZDB (1)
+Mar-15 08:57:49.702 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-15 08:57:49.703 [Task submitter] INFO  nextflow.Session - [ea/c4deb7] Submitted process > NFCORE_WOMBAT:WOMBAT:TPP:RAW2MZML (22)
+Mar-15 08:57:49.717 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-15 08:57:49.718 [Task submitter] INFO  nextflow.Session - [34/f40ca9] Submitted process > NFCORE_WOMBAT:WOMBAT:COMPOMICS:RAW2MZML (4)
+Mar-15 08:57:49.731 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-15 08:57:49.732 [Task submitter] INFO  nextflow.Session - [16/1dda55] Submitted process > NFCORE_WOMBAT:WOMBAT:COMPOMICS:RAW2MZML (5)
+Mar-15 08:57:49.744 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-15 08:57:49.744 [Task submitter] INFO  nextflow.Session - [19/7055d7] Submitted process > NFCORE_WOMBAT:WOMBAT:PROLINE:RAW2MZDB (2)
+Mar-15 08:57:49.759 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-15 08:57:49.768 [Task submitter] INFO  nextflow.Session - [95/e5acbd] Submitted process > NFCORE_WOMBAT:WOMBAT:PROLINE:RAW2MZDB (3)
+Mar-15 08:57:49.783 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-15 08:57:49.784 [Task submitter] INFO  nextflow.Session - [2a/0b147b] Submitted process > NFCORE_WOMBAT:WOMBAT:PROLINE:RAW2MZDB (29)
+Mar-15 08:57:49.798 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-15 08:57:49.802 [Task submitter] INFO  nextflow.Session - [4d/a2d4c8] Submitted process > NFCORE_WOMBAT:WOMBAT:COMPOMICS:RAW2MZML (2)
+Mar-15 08:57:49.817 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-15 08:57:49.819 [Task submitter] INFO  nextflow.Session - [da/488e5b] Submitted process > NFCORE_WOMBAT:WOMBAT:COMPOMICS:RAW2MZML (1)
+Mar-15 08:57:49.834 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-15 08:57:49.835 [Task submitter] INFO  nextflow.Session - [15/ae4612] Submitted process > NFCORE_WOMBAT:WOMBAT:PROLINE:RAW2MZDB (30)
+Mar-15 08:57:49.856 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-15 08:57:49.861 [Task submitter] INFO  nextflow.Session - [5e/da12b9] Submitted process > NFCORE_WOMBAT:WOMBAT:COMPOMICS:RAW2MZML (20)
+Mar-15 08:57:49.904 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-15 08:57:49.912 [Task submitter] INFO  nextflow.Session - [35/403894] Submitted process > NFCORE_WOMBAT:WOMBAT:TPP:RAW2MZML (26)
+Mar-15 08:57:49.933 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-15 08:57:49.934 [Task submitter] INFO  nextflow.Session - [7c/435338] Submitted process > NFCORE_WOMBAT:WOMBAT:COMPOMICS:RAW2MZML (35)
+Mar-15 08:57:49.947 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-15 08:57:49.956 [Task submitter] INFO  nextflow.Session - [fd/db2c5d] Submitted process > NFCORE_WOMBAT:WOMBAT:TPP:RAW2MZML (3)
+Mar-15 08:57:49.977 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-15 08:57:49.988 [Task submitter] INFO  nextflow.Session - [e9/873fb6] Submitted process > NFCORE_WOMBAT:WOMBAT:PROLINE:RAW2MZDB (36)
+Mar-15 08:57:50.001 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-15 08:57:50.001 [Task submitter] INFO  nextflow.Session - [f6/7fa008] Submitted process > NFCORE_WOMBAT:WOMBAT:COMPOMICS:RAW2MZML (27)
+Mar-15 08:57:50.018 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-15 08:57:50.024 [Task submitter] INFO  nextflow.Session - [d6/9152de] Submitted process > NFCORE_WOMBAT:WOMBAT:COMPOMICS:RAW2MZML (31)
+Mar-15 08:57:50.038 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-15 08:57:50.045 [Task submitter] INFO  nextflow.Session - [b2/6b9a10] Submitted process > NFCORE_WOMBAT:WOMBAT:TPP:RAW2MZML (25)
+Mar-15 08:57:50.058 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-15 08:57:50.066 [Task submitter] INFO  nextflow.Session - [d2/d757ca] Submitted process > NFCORE_WOMBAT:WOMBAT:COMPOMICS:RAW2MZML (37)
+Mar-15 08:57:50.080 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-15 08:57:50.081 [Task submitter] INFO  nextflow.Session - [24/ea9b9d] Submitted process > NFCORE_WOMBAT:WOMBAT:TPP:RAW2MZML (28)
+Mar-15 08:57:50.097 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-15 08:57:50.113 [Task submitter] INFO  nextflow.Session - [c9/8891b2] Submitted process > NFCORE_WOMBAT:WOMBAT:COMPOMICS:RAW2MZML (36)
+Mar-15 08:57:50.129 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-15 08:57:50.133 [Task submitter] INFO  nextflow.Session - [20/602455] Submitted process > NFCORE_WOMBAT:WOMBAT:TPP:RAW2MZML (17)
+Mar-15 09:01:32.925 [SIGINT handler] DEBUG nextflow.Session - Session aborted -- Cause: SIGINT
+Mar-15 09:01:33.111 [SIGINT handler] DEBUG nextflow.Session - The following nodes are still active:
+[process] NFCORE_WOMBAT:WOMBAT:MAXQUANT:CONVERT_MAXQUANT
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: sdrf
+  port 1: (value) bound ; channel: fasta
+  port 2: (cntrl) -     ; channel: $
+
+[process] NFCORE_WOMBAT:WOMBAT:MAXQUANT:MAXQUANT_LFQ
+  status=ACTIVE
+  port 0: (value) bound ; channel: fasta
+  port 1: (value) OPEN  ; channel: paramfile
+  port 2: (value) bound ; channel: raw
+  port 3: (cntrl) -     ; channel: $
+
+[process] NFCORE_WOMBAT:WOMBAT:MAXQUANT:NORMALYZERDE
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: maxquant
+  port 1: (value) OPEN  ; channel: exp_file
+  port 2: (value) OPEN  ; channel: comp_file
+  port 3: (value) OPEN  ; channel: parameters
+  port 4: (cntrl) -     ; channel: $
+
+[process] NFCORE_WOMBAT:WOMBAT:CALCBENCHMARKS_MQ
+  status=ACTIVE
+  port 0: (value) bound ; channel: foo
+  port 1: (value) OPEN  ; channel: exp_design_file
+  port 2: (value) OPEN  ; channel: std_prot_file
+  port 3: (value) OPEN  ; channel: std_pep_file
+  port 4: (value) bound ; channel: fasta_file
+  port 5: (value) bound ; channel: workflow
+  port 6: (cntrl) -     ; channel: $
+
+[process] NFCORE_WOMBAT:WOMBAT:PROLINE:MZDB2MGF
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: mzdbfile
+  port 1: (cntrl) -     ; channel: $
+
+[process] NFCORE_WOMBAT:WOMBAT:PROLINE:CREATE_DECOY_DATABASE
+  status=ACTIVE
+  port 0: (value) bound ; channel: fasta
+  port 1: (value) OPEN  ; channel: run
+  port 2: (cntrl) -     ; channel: $
+
+[process] NFCORE_WOMBAT:WOMBAT:PROLINE:PREPARE_SEARCHGUI
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: parameters
+  port 1: (value) bound ; channel: ptm_mapping
+  port 2: (cntrl) -     ; channel: $
+
+[process] NFCORE_WOMBAT:WOMBAT:PROLINE:RUN_SEARCHGUI
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: mgffile
+  port 1: (value) OPEN  ; channel: paramfile
+  port 2: (value) OPEN  ; channel: fasta_decoy
+  port 3: (cntrl) -     ; channel: $
+
+[process] NFCORE_WOMBAT:WOMBAT:PROLINE:CONFIG_PROLINE
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: zip_searches
+  port 1: (queue) OPEN  ; channel: param_file
+  port 2: (value) OPEN  ; channel: parameters
+  port 3: (cntrl) -     ; channel: $
+
+[process] NFCORE_WOMBAT:WOMBAT:PROLINE:EXP_DESIGN_PROLINE
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: mzdbs
+  port 1: (value) bound ; channel: exp_design
+  port 2: (cntrl) -     ; channel: $
+
+[process] NFCORE_WOMBAT:WOMBAT:PROLINE:RUN_PROLINE
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: rfs
+  port 1: (value) OPEN  ; channel: mzdbs
+  port 2: (queue) OPEN  ; channel: lfq_param
+  port 3: (queue) OPEN  ; channel: import_param
+  port 4: (value) OPEN  ; channel: exp_design
+  port 5: (cntrl) -     ; channel: $
+
+[process] NFCORE_WOMBAT:WOMBAT:PROLINE:POLYSTEST
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: exp_design
+  port 1: (queue) OPEN  ; channel: proline_res
+  port 2: (value) OPEN  ; channel: parameters
+  port 3: (cntrl) -     ; channel: $
+
+[process] NFCORE_WOMBAT:WOMBAT:PROLINE:CONVERT_POLYSTEST
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: exp_design
+  port 1: (queue) OPEN  ; channel: pep_quant
+  port 2: (queue) OPEN  ; channel: prot_quant
+  port 3: (cntrl) -     ; channel: $
+
+[process] NFCORE_WOMBAT:WOMBAT:CALCBENCHMARKS_PROLINE
+  status=ACTIVE
+  port 0: (value) bound ; channel: foo
+  port 1: (queue) OPEN  ; channel: exp_design_file
+  port 2: (queue) OPEN  ; channel: std_prot_file
+  port 3: (queue) OPEN  ; channel: std_pep_file
+  port 4: (value) bound ; channel: fasta_file
+  port 5: (value) bound ; channel: workflow
+  port 6: (cntrl) -     ; channel: $
+
+[process] NFCORE_WOMBAT:WOMBAT:COMPOMICS:CREATE_DECOY_DATABASE
+  status=ACTIVE
+  port 0: (value) bound ; channel: fasta
+  port 1: (value) OPEN  ; channel: run
+  port 2: (cntrl) -     ; channel: $
+
+[process] NFCORE_WOMBAT:WOMBAT:COMPOMICS:PREPARE_SEARCHGUI
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: parameters
+  port 1: (value) bound ; channel: ptm_mapping
+  port 2: (cntrl) -     ; channel: $
+
+[process] NFCORE_WOMBAT:WOMBAT:COMPOMICS:RUN_SEARCHGUI
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: mgffile
+  port 1: (value) OPEN  ; channel: paramfile
+  port 2: (value) OPEN  ; channel: fasta_decoy
+  port 3: (cntrl) -     ; channel: $
+
+[process] NFCORE_WOMBAT:WOMBAT:COMPOMICS:RUN_PEPTIDESHAKER
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) OPEN  ; channel: fasta_decoy
+  port 2: (cntrl) -     ; channel: $
+
+[process] NFCORE_WOMBAT:WOMBAT:COMPOMICS:PEPTIDESHAKER_REPORT
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: pepshaker
+  port 1: (cntrl) -     ; channel: $
+
+[process] NFCORE_WOMBAT:WOMBAT:COMPOMICS:FLASHLFQ
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: peptideshaker_out
+  port 1: (value) OPEN  ; channel: mzmlfiles
+  port 2: (value) OPEN  ; channel: parameters
+  port 3: (cntrl) -     ; channel: $
+
+[process] NFCORE_WOMBAT:WOMBAT:COMPOMICS:MSQROB
+  status=ACTIVE
+  port 0: (value) bound ; channel: exp_design
+  port 1: (value) bound ; channel: rawfiles
+  port 2: (value) OPEN  ; channel: quant_tab
+  port 3: (value) OPEN  ; channel: quant_prot_tab
+  port 4: (value) OPEN  ; channel: pep_file
+  port 5: (value) OPEN  ; channel: prot_file
+  port 6: (value) OPEN  ; channel: parameters
+  port 7: (cntrl) -     ; channel: $
+
+[process] NFCORE_WOMBAT:WOMBAT:CALCBENCHMARKS_COMPOMICS
+  status=ACTIVE
+  port 0: (value) bound ; channel: foo
+  port 1: (value) OPEN  ; channel: exp_design_file
+  port 2: (value) OPEN  ; channel: std_prot_file
+  port 3: (value) OPEN  ; channel: std_pep_file
+  port 4: (value) bound ; channel: fasta_file
+  port 5: (value) bound ; channel: workflow
+  port 6: (cntrl) -     ; channel: $
+
+[process] NFCORE_WOMBAT:WOMBAT:TPP:WRITE_CONFIG
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: parameters
+  port 1: (value) bound ; channel: ptm_mapping
+  port 2: (cntrl) -     ; channel: $
+
+[process] NFCORE_WOMBAT:WOMBAT:TPP:RUN_COMET
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: mzmlfile
+  port 1: (value) bound ; channel: fasta
+  port 2: (value) OPEN  ; channel: comet_param
+  port 3: (cntrl) -     ; channel: $
+
+[process] NFCORE_WOMBAT:WOMBAT:TPP:PEPTIDEPROPHET
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: pepxml_file
+  port 1: (value) bound ; channel: fasta
+  port 2: (value) OPEN  ; channel: mzml
+  port 3: (value) OPEN  ; channel: parameters
+  port 4: (cntrl) -     ; channel: $
+
+[process] NFCORE_WOMBAT:WOMBAT:TPP:PROTEINPROPHET
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: pepxml_file
+  port 1: (value) OPEN  ; channel: parameters
+  port 2: (cntrl) -     ; channel: $
+
+[process] NFCORE_WOMBAT:WOMBAT:TPP:STPETER
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) OPEN  ; channel: mzmls
+  port 2: (value) bound ; channel: fasta
+  port 3: (value) OPEN  ; channel: parameters
+  port 4: (cntrl) -     ; channel: $
+
+[process] NFCORE_WOMBAT:WOMBAT:TPP:PROTXML2CSV
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) OPEN  ; channel: parameters
+  port 2: (cntrl) -     ; channel: $
+
+[process] NFCORE_WOMBAT:WOMBAT:TPP:MERGEOUTPUT
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: csv_files
+  port 1: (value) bound ; channel: raw_files
+  port 2: (value) bound ; channel: exp_design_file
+  port 3: (cntrl) -     ; channel: $
+
+[process] NFCORE_WOMBAT:WOMBAT:TPP:ROTS
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: protein_quants
+  port 1: (value) OPEN  ; channel: peptide_quants
+  port 2: (value) OPEN  ; channel: parameters
+  port 3: (cntrl) -     ; channel: $
+
+[process] NFCORE_WOMBAT:WOMBAT:CALCBENCHMARKS_TPP
+  status=ACTIVE
+  port 0: (value) bound ; channel: foo
+  port 1: (value) OPEN  ; channel: exp_design_file
+  port 2: (value) OPEN  ; channel: std_prot_file
+  port 3: (value) OPEN  ; channel: std_pep_file
+  port 4: (value) bound ; channel: fasta_file
+  port 5: (value) bound ; channel: workflow
+  port 6: (cntrl) -     ; channel: $
+
+Mar-15 09:01:33.116 [main] DEBUG nextflow.Session - Session await > all process finished
+Mar-15 09:01:33.116 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Mar-15 09:01:33.130 [main] INFO  nextflow.Nextflow - -[0;35m[nf-core/wombat][0;31m Pipeline completed with errors[0m-
+Mar-15 09:01:33.139 [main] WARN  n.processor.TaskPollingMonitor - Killing running tasks (24)
+Mar-15 09:01:33.247 [SIGINT handler] INFO  nextflow.Session - Adieu
+Mar-15 09:01:33.251 [main] DEBUG nextflow.executor.LocalTaskHandler - Unable to kill NFCORE_WOMBAT:WOMBAT:PROLINE:RAW2MZDB (29) -- command: kill -TERM 359907; exit: 130 
